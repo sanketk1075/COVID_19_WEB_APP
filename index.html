@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap-social.css">
+    <link href="css/styles.css" rel="stylesheet">
+     <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+    <!-- endbuild -->
+    <title>COVID-19 </title>
+	
+</head>
+
+<body>
+<nav class="navbar navbar-dark bg-red navbar-expand-md fixed-top">
+    <div class="container">
+  <a class="navbar-brand" href="./index.html"><img src="img/3.jpg" height="30" width="41"></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span>Home</a>
+        
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./aboutus.html">
+            <span class="fa fa-info fa-lg"></span> About</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="fa fa-list fa-lg "></span> Menu
+        
+        </a>
+        <div class="dropdown-menu bg-info text-white">
+          <a class="dropdown-item" href="./donation.html"><b>DONATION SECTION</b></a>
+          <a class="dropdown-item" href="./student.html"><b>STUDENT SECTION</b></a>
+          <a class="dropdown-item" href="./grocery.html"><b>ESSENTIALS SECTION</b></a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="./contactus.html">
+            <span class="fa fa-address-card fa-lg"></span> Contact
+            </a>
+      </li>
+       <li class="nav-item align-self-center">
+                <a class="nav-link" href="https://tarun-wozniak-48e0bf.netlify.app">
+                    <button class="btn-danger btn-primary " type="button"  data-toggle="collapse" >
+                        <span class="fa fa-danger fa-lg"></span><b> COVID-19 TRACKER </b></button></a></li>
+    </ul>
+    <span class="navbar-text">
+        <a id="loginButton" href="https://tarun-login.herokuapp.com/">
+        <span class="fa fa-sign-in" ></span> Login</a>
+       
+    </span>   
+
+      </div>
+</nav>
+    
+
+    
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Submit</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                           <div class="form-group row">
+                                <label for="section" class="col-10 col-form-label justify-content-start"><b>Any International journey in past 28 to 45 days</b></label>
+                                <div class="btn-group col-md-4" >
+                                    <label class="btn btn-success active ">
+                                        <input type="radio" name="section" id="yes" autocomplete="off" checked> Yes
+                                    </label>
+                                    <label class="btn btn-danger btn-sm">
+                                        <input type="radio" name="section" id="no" autocomplete="off"> No
+                                    </label>  
+                                </div>
+                            </div>
+
+                           <div class="form-group row">
+                                <label for="section" class="col-10 col-form-label justify-content-start"><b>Do you have or had in past any of the following ?: Hypertension,Heart Disease,Lung Disease</b></label>
+                                <div class="btn-group col-md-4" data-toggle="buttons">
+                                    <label class="btn btn-success active ">
+                                        <input type="radio" name="section" id="yes" autocomplete="off" checked> Yes
+                                    </label>
+                                    <label class="btn btn-danger">
+                                        <input type="radio" name="section" id="no" autocomplete="off"> No
+                                    </label>  
+                            </label>
+                                    </label>  
+                                </div>
+                            </div>
+				<div class="form-group row">
+                                <label for="section1" class="col-10 col-form-label justify-content-start"><b>Do you have cough,fever ?</b></label>
+                                <div class="btn-group col-md-4" data-toggle="buttons">
+                                    <label class="btn btn-success active">
+                                        <input type="radio" name="section1" id="yes" autocomplete="off" checked> Yes
+                                    </label>
+                                    <label class="btn btn-danger">
+                                        <input type="radio" name="section1" id="no" autocomplete="off"> No
+                                    </label>  
+                                </div>
+                            </div>
+				<div class="form-group row">
+                                <label for="section1" class="col-10 col-form-label justify-content-start"><b>Have you been in contact with any covid-19 patient ?</b></label>
+                                <div class="btn-group col-md-4" data-toggle="buttons">
+                                    <label class="btn btn-success active">
+                                        <input type="radio" name="section1" id="yes" autocomplete="off" checked> Yes
+                                    </label>
+                                    <label class="btn btn-danger">
+                                        <input type="radio" name="section1" id="no" autocomplete="off"> No
+                                    </label>  
+                                </div>
+                            </div>
+				<div class="form-group row">
+                                <label for="section2" class="col-10  col-form-label justify-content-start"><b>Ready to vounteer ?</b></label>
+                                <div class="btn-group col-md-4" data-toggle="buttons">
+                                    <label class="btn btn-success active">
+                                        <input type="radio" name="section2" id="yes" autocomplete="off" checked> Yes
+                                    </label>
+                                    <label class="btn btn-danger">
+                                        <input type="radio" name="section2" id="no" autocomplete="off"> No
+                                    </label>  
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="date" class="col-12 col-sm-12 col-md-2 col-form-label">Date</label>
+                                <div class="col-12 col-sm-12 col-md-4">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>                                            
+                                        </div>
+                                        <input type="text" class="form-control" id="date" name="date" placeholder="MM/DD/YYY">
+                                    </div>                                  
+                                </div>
+				</div>
+				<div class="form-group row">
+				<label for="date" class="col-12 col-sm-12 col-md-2 col-form-label">Time</label>
+                                <div class="col-12 col-sm-12 col-md-4">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-clock-o"></i>                                            
+                                        </div>
+                                        <input type="time" class="form-control" id="time" name="time" placeholder="Time">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="offset-md-2 col-md-10">
+                                    <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-default btn-sm" ></button>
+                                        <a class="" href="https://tarun-3434.herokuapp.com">
+                                       <b> Submit </b></button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-12 col-sm-6">
+                    <h1><b>CoronaVirus:&nbspCovid-19</b></h1>
+                    <p>The most common symptoms of COVID-19 are fever, tiredness, and
+                       dry cough. Some patients may have aches and pains, nasal
+                       congestion, runny nose, sore throat or diarrhea. These symptoms are
+                    usually mild and begin gradually. </p>
+                </div>
+                <div class="col-12 col-sm align-self-center">
+                    <img src="img/3.jpg" class="img-fluid">
+                </div>
+                <div class="col-12 col-sm align-self-center">
+                    <a type="button" class="btn btn-warning btn-sm btn-block" id="reserveButton">Submit</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row row-content">
+            <div class="col">
+                <div id="mycarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img class="d-block img-fluid"
+                                src="img/74997429.cms" alt="#">
+                            <div class="carousel-caption d-none d-md-block">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid"
+                                src="https://english.samajalive.in/wp-content/uploads/2020/04/PM-CARES.jpg" alt="Grand Buffet" width="1080">
+                            <div class="carousel-caption d-none d-md-block" >
+                                <div class="align-self-center">
+                                    <a href="https://www.pmcares.gov.in/en/?cbps=1"><h1><span class="btn btn-primary btn-danger" ><b>DONATE</b></span></h1></a>
+                                    </div>
+                            </div>
+                        </div>
+                        
+                      
+
+                       
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid"
+                                src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202003/Haryana_0.jpeg?gQMf77F.7q2aKCHk87Og7_mPHzmEz7xc" alt="Grand Buffet" width="1080">
+                            <div class="carousel-caption d-none d-md-block">
+
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid"
+                                src="https://images1.livehindustan.com/uploadimage/library/2020/04/08/16_9/16_9_1/people_giving_food_to_the_street_dogs_at_jantar_mantar_road_during_lockdown_1586348123.jpg" alt="Grand Buffet" width="1080">
+                            <div class="carousel-caption d-none d-md-block">
+
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid"
+                                src="https://i.ytimg.com/vi/D9OKTVSDK2M/maxresdefault.jpg" alt="Grand Buffet" width="1080">
+                            <div class="carousel-caption d-none d-md-block">
+
+                            </div>
+                        </div>
+
+                        <ol class="carousel-indicators">
+                            <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#mycarousel" data-slide-to="1"></li>
+                            <li data-target="#mycarousel" data-circle-to="2"></li>
+                            <li data-target="#mycarousel" data-circle-to="3"></li>
+                            <li data-target="#mycarousel" data-circle-to="4"></li>
+                            <li data-target="#mycarousel" data-circle-to="5"></li>
+                            <li data-target="#mycarousel" data-circle-to="6"></li>
+                        </ol>
+                        <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                         </a>
+                        <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                        <button class="btn btn-danger btn-sm" id="carousel-button">
+                            <span id="carousel-button-icon" class="fa fa-pause"></span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+          <div class="row row-content align-items-center">
+            
+            <div class="col-sm-4 col-md-3 order-2">   <!-- Replaced flex-first and flex-last with order-1 and order-2 in beta 2" -->
+                
+            </div>
+            <div class="col-sm col-md order-1">
+               <div class="media">
+                    <span class="embed-youtube" style="text-align:center; display: block;">
+                        <video src="media/corona_2.mp4" preload="auto" width="600" height="300" allowfullscreen="True" style="border:2px;" controls loop></video>
+                       <!---- <iframe class="youtube-player" type="text/html" width="1040" height="360" src="https://www.youtube.com/embed/xez1Vj39C84?version=3&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" allowfullscreen="True" style="border:0;">
+                    </iframe> !-->
+                </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm col-md order-1">
+            <div class="media">
+                <div class="col-12 col-sm-6">
+                <h2 class="mt-0">COVID-19</h2>
+                   <p>The virus is thought to be natural and has an animal origin,through spillover infection.The actual origin is unknown,but the first known cases of infection happened in China. By December 2019,the spread of infection was almost entirely driven by human-to-human transmission.A study of the first 41 cases of confirmed COVID‑19, published in January 2020 in The Lancet, revealed the earliest date of onset of symptoms as 1 December 2019.Official publications from the WHO reported the earliest onset of symptoms as 8 December 2019.Human-to-human transmission was confirmed by the WHO and Chinese authorities by 20 January 2020.</p>
+                </div>
+                <div class="col-12 col-sm align-self-center">
+                    <img src="img/corona.jpeg" class="img-fluid">
+                </div>
+         </div>
+     </div>
+
+
+        <div class="row row-content align-items-center">
+             <!-- <div class="col-sm-4 col-md-3"> -->
+                <div class="row row-content align-items-center">
+                    <section class="comments" id="results">
+    <style>
+       .comment-body iframe{
+           width:100% !important;
+       }
+       .img-responsive{
+           display: block;
+           float: left;
+           margin-right: 10px;
+           height: auto;
+           width: 100%;
+       }
+       .imgCont{
+           display: block;
+           float: left;
+           margin-right: 10px;
+           height: auto;
+           width: 100%;
+       }
+       
+       #results .fb-icons-custom>img {
+           width: 32px;
+           height: 32px;
+           cursor: pointer;
+           display: block;
+           float: left;
+       }
+       .related-keyword a {
+           color: white !important;
+       }
+       </style>
+                   
+       
+       <input type="hidden" name="" class="blogUrl" value="/article/current-affairs/coronavirus-india-live-updates-corona-vaccine-global-cases-covid-19-death-toll-italy-uk-usa-delhi-maharashtra-telangana-latest-news-120050700138_1.html">
+       
+       <style>
+       .comment-body iframe{
+           width:100% !important;
+       }
+       .img-responsive{
+           display: block;
+           float: left;
+           margin-right: 10px;
+           height: auto;
+           width: 100%;
+       }
+       .imgCont{
+           display: block;
+           float: left;
+           margin-right: 10px;
+           height: auto;
+           width: 100%;
+       }
+       
+       #results .fb-icons-custom>img {
+           width: 32px;
+           height: 32px;
+           cursor: pointer;
+           display: block;
+           float: left;
+       }
+       .related-keyword a {
+           color: white !important;
+       }
+       </style>
+    
+        <article class="comment1">
+             <div class="">
+                     <input type="hidden" name="lastId_1" id="lastId_1" value="149077" class="lastContetId">
+                   
+                <div class="addthis_sharing_toolbox" data-url="https://mybs.in/2YNAGgI" data-title="Hotter, humid weather may not halt spread of Covid-19: Study" data-description="<div>
+           Temperature and latitude are not associated with the spread of COVID-19 disease, according to a global study that found school closures and other public health measures are having a positive effect on containing the novel coronavirus.</div>
+       <div>
+           &nbsp; </div>
+       <div>
+           The study, published in the Canadian Medical Association Journal, looked at 144 geopolitical areas -- states and provinces in Australia, the US, and Canada as well as various countries around the world -- and a total of over 3,75,600 confirmed COVID-19 cases.</div>
+       <div>
+           &nbsp;</div>
+       <div>
+           The researchers said China, Italy, Iran and South Korea were excluded because the virus was either waning in the case of China or in full disease outbreak at the time of the analysis in others. <strong><a href=https://www.business-standard.com/article/pti-stories/hotter-humid-weather-may-not-halt-spread-of-covid-19-study-120050800441_1.html target=_blank>Read on...</a></strong></div>" data-media="" style="float:right!important;">
+                   <a onclick="sharebutton('https://mybs.in/2YNAGgI','Hotter, humid weather may not halt spread of Covid-19: Study')" class="fb-icons-custom"><img src="https://bsmedia.business-standard.com/include/_mod/site/html5/images/icon/f-connect-icon.png"></a>
+                   <div class="at-share-tbx-element addthis_32x32_style addthis-smartlayers addthis-animated at4-show">
+                   </div>
+                 </div>
+             </div>
+            
+             <div class="clearfix"></div>
+             <div class="comment-body" id="commentary_149077">
+                <div class="text2">
+                            <h2 class="mT0 title9">Hotter, humid weather may not halt spread of Covid-19: Study</h2>
+                            <p>Temperature and latitude are not associated with the spread of COVID-19 disease, according to a global study that found school closures and other public health measures are having a positive effect on containing the novel coronavirus.</p>
+
+                            <p>The study, published in the Canadian Medical Association Journal, looked at 144 geopolitical areas -- states and provinces in Australia, the US, and Canada as well as various countries around the world -- and a total of over 3,75,600 confirmed COVID-19 cases.</p>
+      
+                            <p>The researchers said China, Italy, Iran and South Korea were excluded because the virus was either waning in the case of China or in full disease outbreak at the time of the analysis in others. <a href="https://www.business-standard.com/article/pti-stories/hotter-humid-weather-may-not-halt-spread-of-covid-19-study-120050800441_1.html" target="_blank"> Read more...</a>
+                            </p>
+                        </div>
+                    </div>
+                               <div class="clearfix"></div>
+                   
+                </div>
+           </div>
+               <div style="display:none;">
+               <a class="commentary_heading" href="#commentary_149077" style="color:#000;">
+               <span class="fS11 grey">
+                   <img src="https://bsmedia.business-standard.com/_media/bs/theme/html-5-live-blog/images/dot.png" class="fL mT7 mCS_img_loaded">
+                   &nbsp;12:05 PM		</span> 
+               <span class="clearfix"></span> 
+               Hotter, humid weather may not halt spread of Covid-19: Study		</a>
+            </div>
+              </article>
+       
+        
+       <input type="hidden" name="" class="blogUrl" value="/article/current-affairs/coronavirus-india-live-updates-corona-vaccine-global-cases-covid-19-death-toll-italy-uk-usa-delhi-maharashtra-telangana-latest-news-120050700138_1.html">
+       
+       </section>
+               </div>
+               
+            </div>
+        </div>
+
+        <!-- <div class="row row-content align-items-center">
+            <div class="about_corona" id="abt">
+                <div class="symptoms">
+                  <img src="https://www.mygov.in/sites/all/themes/mygov/images/covid/symptoms.png" alt="" title="">
+                </div>
+                <div class="corona_right">
+                  <div class="spread">
+                   <h3>How it Spreads</h3>
+                   <img src="https://www.mygov.in/sites/all/themes/mygov/images/covid/block-one.png" alt="" title="">
+                  </div>
+                  <div class="prevention">
+                   <h3>PREVENTION</h3>
+                   <img src="https://www.mygov.in/sites/all/themes/mygov/images/covid/block-two.png" alt="" title="">
+                  </div>
+                </div>
+      
+      
+              
+          </div> -->
+        </div>
+    </div>    
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="row">             
+                <div class="col-4 offset-1 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="./aboutus.html">About</a></li>
+                        <li><a href="./index.html">Menu</a></li>
+                        <li><a href="./contactus.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-7 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address style="font-size: 100%">
+		              Office of CEO, MyGov
+                      3rd Floor,
+                      Room no-3015
+                      Ministry of Electronics and Information Technology
+                      (Government of India)
+                      Electronics Niketan, 6, CGO Complex,
+                      Lodhi Road,
+                      New Delhi - 110003
+                      India<br>
+                      <i class="fa fa-phone"></i>:+91-11-2397 8046<br>
+                      <i class="fa fa-phone"></i>:+91-11-2397 1075 <br>
+                      <i class="fa fa-envelope-o"></i>:connect@mygov.nic.in<br>
+                      <i class="fa fa-envelope fa-lg"></i>: 
+                      <a href="https://pgportal.gov.in/">Find us Here</a>
+                   </address>
+                  
+                </div>
+                <div class="col-12 col-sm-4 align-self-center">
+                    <div class="text-center">
+                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+                    </div>
+                </div>
+           </div>
+           <!-- <body style="background-color:black;"> -->
+            <div style="background-color:black">
+           <div class="service-footer-wrapper" ><style type="text/css">.sub-sites{text-align:center; position:relative; padding:10px 15px 0;}.sub-sites li{padding:0 10px; border-left:1px solid #6b6c6f; display:inline-block;  margin-bottom:10px; list-style:none;} .sub-sites li:first-child,.footer-logo li:first-child{border:none;}.sub-sites:after {    background: rgba(0, 0, 0, 0) linear-gradient(to right, rgba(6, 47, 60, 0.01) 0%, rgba(45, 75, 100, 0.98) 50%, #2c4a63 51%, rgba(6, 47, 60, 0.01) 100%) repeat scroll 0 0;    content: "";display: block;    height: 1px;    position: absolute;    right: 0;    top: 0;    width: 100%;}.footer-logo {    background: #000;    padding: 7px 15px 0;    text-align: center;}.footer-logo li {    border-left: 1px solid #28282a;    display: inline-block;    padding: 0 10px;	margin-bottom:7px;    vertical-align: middle;	list-style:none;	 box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;} @media all and (max-width:640px){	.sub-sites li, .sub-sites li:first-child{padding:10px; border:1px solid #2c4a63;}	.sub-sites{padding:15px 10px 5px;} } @media all and (max-width:567px){	.footer-logo{overflow:hidden; padding:10px 5px 0;}	.footer-logo li{width:50%; border-left:none; padding:0px; float:left; margin:10px 0;}	.footer-logo li:nth-child(2n+2){border-left:1px solid #28282a; } }</style><div class="service-footer-wrapper">  <ul class="sub-sites">  
+            <li>
+        <a title="Transforming India" alt="Transforming India" href="https://transformingindia.mygov.in" target="_blank">
+        <img title="Transforming India" alt="Transforming India" src="https://www.mygov.in/footer_service/images/Transforming-india-logo.png"></a></li><li>
+        <a title="MyGov Innovate" alt="MyGov Innovate" href="https://innovate.mygov.in" target="_blank">
+       <img title="MyGov Innovate" alt="MyGov Innovate" src="https://www.mygov.in/footer_service/images/innovation-logo.png"></a></li><li>                    <a title="Swachhbharat" alt="Swachhbharat" href="https://swachhbharat.mygov.in/" target="_blank">
+       <img title="Swachhbharat" alt="Swachhbharat" src="https://www.mygov.in/footer_service/images/swachh-bharat.png"></a></li><li>
+        <a title="MyGov Quiz" alt="MyGov Quiz" href="https://quiz.mygov.in" target="_blank">
+        <img title="MyGov Quiz" alt="MyGov Quiz" src="https://www.mygov.in/footer_service/images/mygov_quiz.png"></a></li><li>
+        <a title="MyGov Blog" alt="MyGov Blog" href="https://blog.mygov.in" target="_blank">
+        <img alt="" src="https://www.mygov.in/footer_service/images/blog-logo.png"></a></li><li>
+        <a title="Self4Society" alt="Self4Society" href="https://self4society.mygov.in" target="_blank">
+        <img alt="Self4Society Logo" src="https://www.mygov.in/footer_service/images/itowe-logo.png"></a></li><li>
+        <a title="E-Greetings" alt="E-Greetings" href="https://egreetings.gov.in" target="_blank">
+        <img title="E-Greetings" alt="E-Greetings" src="https://www.mygov.in/footer_service/images/e-greating.png"></a></li></ul> 
+        <div class="footer-logo">    <ul><li>
+        <a target="_blank" href="http://www.digitalindia.gov.in">
+        <img title="Digital India (External Site that opens in a new window)" alt="Digital India" src="https://www.mygov.in/footer_service/images/digital-india-logo.png"></a></li><li>
+        <a target="_blank" href="http://data.gov.in">
+        <img title="Data Portal (External Site that opens in a new window)" alt="Data Portal" src="https://www.mygov.in/footer_service/images/data-gov-logo.png"></a></li><li>
+        <a target="_blank" href="https://india.gov.in">
+        <img title="National Portal of India (External Site that opens in a new window)" alt="National Portal of India" src="https://www.mygov.in/footer_service/images/india-gov-logo.png"></a></li><li>
+        <a target="_blank" href="https://www.mygov.in">
+        <img title="MyGov (External Site that opens in a new window)" alt="MyGov" src="https://www.mygov.in/footer_service/images/mygov-footer-logo.png"></a></li><li>
+        <a title="MeitY (External Site that opens in a new window)" alt="MeitY" target="_blank" href="http://meity.gov.in/">
+        <img title="Meity(External Site that opens in a new window)" alt="Meity" src="https://www.mygov.in/footer_service/images/Meity_logo.png"></a></li><li>
+        <a target="_blank" href="http://pmindia.gov.in">
+        <img title="PMINDIA(External Site that opens in a new window)" alt="PMINDIA" src="https://www.mygov.in/footer_service/images/pm-india-logo.png"></a></li></ul>  </div></div></div>
+        </div>
+        
+        <div class="row justify-content-center">             
+            <div class="col-auto">
+                <p><b>© Copyright 2020:Tarun & Team.</b></p>
+            </div>
+       </div>
+
+    </body>
+    </footer>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <!-- Bootsrap beta 4 replaced Tether with Popper -->
+    <!-- build:js js/main.js -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+     <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/5edf55d19e5f694422903252/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!-- endbuild -->
+</body>
+
+</html>
